@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thunder Beats Band</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {font-family: Arial, sans-serif; margin:0; background:#111; color:#eee;}
+    header {background:#222; color:#fff; padding:20px; text-align:center;}
+    nav a {color:#fff; margin:0 15px; text-decoration:none; font-weight:bold;}
+    section {padding:40px 20px;}
+    h2 {color:#f04e30; margin-bottom:20px;}
+    /* Music Player */
+    .player {text-align:center; margin:20px;}
+    audio {width:80%; max-width:500px;}
+    /* Tour Dates */
+    .tour {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;}
+    .tour-date {background:#222; padding:20px; border-radius:8px;}
+    .tour-date h3 {margin:0 0 10px;}
+    /* Merchandise */
+    .store {display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px;}
+    .item {background:#222; padding:20px; border-radius:8px; text-align:center;}
+    .item img {width:100%; border-radius:6px; margin-bottom:10px;}
+    .item button {padding:10px; background:#f04e30; color:#fff; border:none; border-radius:4px; cursor:pointer;}
+    .item button:hover {background:#c63c24;}
+    /* Gallery */
+    .gallery {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;}
+    .gallery img, .gallery iframe {width:100%; border-radius:8px;}
+    footer {background:#222; color:#ccc; text-align:center; padding:20px;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Thunder Beats Band</h1>
+    <nav>
+      <a href="#music">Music</a>
+      <a href="#tour">Tour Dates</a>
+      <a href="#store">Merchandise</a>
+      <a href="#gallery">Gallery</a>
+    </nav>
+  </header>
+
+  <!-- Music Player -->
+  <section id="music">
+    <h2>Listen to Our Music</h2>
+    <div class="player">
+      <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </section>
+
+  <!-- Tour Dates -->
+  <section id="tour">
+    <h2>Upcoming Tour Dates</h2>
+    <div class="tour">
+      <div class="tour-date">
+
+        <h3>Delhi</h3>
+        <p>Jan 15, 2026</p>
+        <p>Venue: Jawaharlal Nehru Stadium</p>
+      </div>
+      <div class="tour-date">
+        <h3>Mumbai</h3>
+        <p>Feb 10, 2026</p>
+        <p>Venue: NSCI Dome</p>
+      </div>
+      <div class="tour-date">
+        <h3>Bangalore</h3>
+        <p>Mar 5, 2026</p>
+        <p>Venue: Palace Grounds</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Merchandise Store -->
+  <section id="store">
+    <h2>Merchandise Store</h2>
+    <div class="store">
+      <div class="item">
+        <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=600" alt="Band T-Shirt">
+        <h3>Band T-Shirt</h3>
+        <p>₹799</p>
+        <button onclick="buyItem('Band T-Shirt')">Buy Now</button>
+      </div>
+      <div class="item">
+        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=600" alt="Band Cap">
+        <h3>Band Cap</h3>
+        <p>₹499</p>
+        <button onclick="buyItem('Band Cap')">Buy Now</button>
+      </div>
+      <div class="item">
+        <img src="https://images.unsplash.com/photo-1513863326356-4e3f8c7f9a5f?w=600" alt="Poster">
+        <h3>Poster</h3>
+        <p>₹299</p>
+        <button onclick="buyItem('Poster')">Buy Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=600" alt="Band performing live">
+      <img src="https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?w=600" alt="Guitar close-up">
+      <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Thunder Beats Band. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function buyItem(item){
+      alert("You selected: " + item + ". Thank you for supporting the band!");
+    }
+  </script>
+</body>
+</html>
